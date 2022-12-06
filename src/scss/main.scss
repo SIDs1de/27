@@ -1,0 +1,168 @@
+// Главный файл, где пишутся и куда подключаются все стили проекта
+
+// Адаптивное свойство - используется, если дизайнером предоставлен неполный макет,
+// чтобы при уменьшении или увеличении экрана паддинги, размеры шрифта автоматически
+// увеличивались / уменьшались в границах от десктопного значения до телефонного
+// Подробнее: https://www.youtube.com/watch?v=eaOAY0vIB4U
+$maxWidth: 1920; // Для масштабирования, например, текста, если экран будет увеличиваться и станет больше контейнера
+$maxWidthContainer: 1200; // Для масштабирования, например, текста, если экран будет уменьшаться и станет меньше контейнера
+
+// Импорт дополнительных файлов стилей и настроек
+@import "variables";
+@import "../../node_modules/normalize.css/normalize";
+@import "start";
+@import "mixins/font-face";
+@import "mixins/adaptive-value";
+@import "fonts";
+@import "global";
+
+// Основная часть
+
+body {
+  font-family: "Inter", sans-serif;
+  color: $black;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+// ----- PAGE -----
+.page {
+  &__header {
+  }
+}
+// ----- PAGE -----
+// ----- HEADER -----
+.header {
+  padding: 33px 0;
+  background-color: $black;
+  color: $gray;
+  font-size: 24px;
+  line-height: calc(29 / 24);
+  &__inner {
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+  }
+  &__menu {
+    display: flex;
+    gap: 30px;
+    flex: 1 0 0;
+  }
+  &__item {
+    transition: color 0.2s;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 0;
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      background-color: $gray;
+      transition: width 0.2s, color 0.2s;
+    }
+    &:hover {
+      color: #fff;
+      &::after {
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+  }
+  &__logo {
+  }
+  &__logo-img {
+    path {
+      transition: fill 0.2s;
+    }
+    &:hover {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &__phone {
+    flex: 1 0 0;
+    text-align: right;
+  }
+  &__phone-link {
+    transition: color 0.2s;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 0;
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      background-color: $gray;
+      transition: width 0.2s, color 0.2s;
+    }
+    &:hover {
+      color: #fff;
+      &::after {
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+  }
+}
+// ----- HEADER -----
+// ----- MAIN -----
+.main {
+  &__cover {
+    padding: 70px 0 40px;
+  }
+}
+// ----- MAIN -----
+// ----- COVER -----
+.cover {
+  background-color: #f5f5f7;
+  &__title-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    color: $purple;
+  }
+  &__img-wrapper {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  &__img {
+  }
+  &__btn-wrapper {
+    text-align: center;
+  }
+  &__btn {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29 / 24);
+    color: #fff;
+    padding: 22px 117px 19px;
+    background-color: $purple;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background-color .2s;
+    &:hover {
+      background-color: darken($purple, 10%);
+    }
+  }
+}
+// ----- COVER -----
+
+@import "media";
