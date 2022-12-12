@@ -125,7 +125,7 @@ body {
     @include adaptive-value("padding-bottom", 150, 50, 1);
   }
   &__color {
-    padding: 0 0 150px;
+    @include adaptive-value("padding-bottom", 150, 50, 1);
   }
 }
 // ----- MAIN -----
