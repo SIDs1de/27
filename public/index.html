@@ -56,49 +56,70 @@
   <!-- CSS -->
   <link href="css/main.min.css" rel="stylesheet">
 </head>
+<!-- PAGE -->
 
 <body class="page">
-
+  <!-- HEADER -->
   <header class="header page__header">
     <div class="container">
+      <!-- HEADER__INNER -->
       <div class="header__inner">
+        <!-- HEADER__NAV -->
         <nav class="header__nav">
+          <!-- HEADER__MENU -->
           <ul class="header__menu">
+            <!-- HEADER__ITEM -->
             <li class="header__item">
-              <a class="header__item-link" href="#">Что нового</a>
+              <a class="header__item-link" href="#new">Что нового</a>
             </li>
+            <!-- HEADER__ITEM -->
             <li class="header__item">
-              <a class="header__item-link" href="#">Цвет</a>
+              <a class="header__item-link" href="#color">Цвет</a>
             </li>
+            <!-- HEADER__ITEM -->
             <li class="header__item">
-              <a class="header__item-link" href="#">Заказать</a>
+              <a class="header__item-link" href="#want">Заказать</a>
             </li>
           </ul>
-          <a class="header__logo" href="#">
-            <svg-to-inline class-name="header__logo-img" path="images/header/logo.svg" lazy="true"
+          <!-- HEADER__MENU -->
+          <a class="header__logo" href="/">
+            <svg-to-inline class-name="header__logo-img" path="images/global/logo.svg" lazy="true"
               loading-label="Loading" alt="Логотип сайта"></svg-to-inline>
+            <!-- <img class="header__logo-img" src="images/global/logo.svg" alt=""> -->
           </a>
           <div class="header__phone">
             <a class="header__phone-link" href="tel:380504565656">
               +38 050-456-56-56
             </a>
           </div>
+          <div class="header__burger burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </div>
         </nav>
+        <!-- HEADER__NAV -->
       </div>
+      <!-- HEADER__INNER -->
     </div>
   </header>
-
+  <!-- HEADER -->
+  <!-- MAIN -->
   <main class="main">
+    <!-- COVER -->
     <section class="cover main__cover">
       <div class="container">
+        <!-- COVER__TITLE -->
         <div class="cover__title-wrapper">
           <h1 class="cover__title">
             IPHONE 14 PRO
           </h1>
         </div>
+        <!-- COVER__IMG -->
         <div class="cover__img-wrapper">
           <img class="cover__img" src="images/cover/iphones.png" alt="Айфоны в разных цветах">
         </div>
+        <!-- COVER__BTN -->
         <div class="cover__btn-wrapper">
           <button class="cover__btn" type="button">
             ВЫБРАТЬ
@@ -106,9 +127,208 @@
         </div>
       </div>
     </section>
+    <!-- COVER -->
+
+    <!-- NEW -->
+    <section class="new main__new" id="new">
+      <div class="container">
+        <!-- NEW__TITLE -->
+        <div class="new__title-wrapper title-wrapper">
+          <h2 class="title new__title">
+            ЧТО НОВОГО
+          </h2>
+        </div>
+        <!-- NEW__INNER -->
+        <div class="new__inner">
+          <!-- NEW__COL -->
+          <div class="new__col new__info">
+            <p class="new__par">
+              Все модели оснащены однокристальной системой A16 Bionic, 48-мегапиксельной основной камерой и экранами
+              ProMotion с защитой Ceramic Shield и частотным диапазоном 1 — 120 Гц, а также ускоренной памятью LPDDR5.
+              Дизайн линейки обновлен, на фронтальной панели смартфонов два выреза.
+            </p>
+            <p class="new__par">
+              Все iPhone 14 в США будут продаваться без лотка для SIM-карт: производитель заявляет, что улучшенная
+              технология eSIM позволит перенести старые электронные сим-карты на новые смартфоны.
+            </p>
+            <p class="new__par">
+              Обновлены фронтальная камера (она снабжена автофокусом и быстрее распознает пользователя в условиях
+              недостаточной освещенности) и сенсор основной камеры.
+            </p>
+            <p class="new__par">
+              <b class="new__par-bold">
+                iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». Также в ассортименте появился новый цвет. В
+                смартфоне, в отличие от «обычных» 14-х айфонов, установлен процессор A16 Bionic, который может за
+                секунду производить 4 трлн операций с фото.
+              </b>
+            </p>
+          </div>
+          <!-- NEW__COL -->
+          <div class="new__col new__phone">
+            <!-- NEW__IMG -->
+            <div class="new__img-wrapper">
+              <img class="new__img" src="images/new/phone.jpg" alt="Ihpone 14 Pro">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEW -->
+    <!-- COLOR -->
+    <section class="color main__color" id="color">
+      <div class="container">
+        <!-- COLOR__TITLE -->
+        <div class="color__title-wrapper title-wrapper">
+          <h2 class="title color__title">
+            ВЫБЕРИ СВОЙ ЦВЕТ
+          </h2>
+        </div>
+        <!-- COLOR__PHONES-LIST -->
+        <ul class="color__phones-list">
+          <!-- COLOR__PHONE -->
+          <li class="color__phone">
+            <a class="color__phone-link" href="#">
+              <figure class="color__figure">
+                <img class="color__img" src="images/color/1.jpg" alt="Серебристый iphone">
+                <dl class="color__descr-li">
+                  <dt class="color__phone-title">Silver</dt>
+                  <dd class="color__phone-color">Серебристый</dd>
+                </dl>
+              </figure>
+            </a>
+          </li>
+          <!-- COLOR__PHONE -->
+          <li class="color__phone">
+            <a class="color__phone-link" href="#">
+              <figure class="color__figure">
+                <img class="color__img" src="images/color/2.jpg" alt="Тёмно-фиолетовый iphone">
+                <dl class="color__descr-li">
+                  <dt class="color__phone-title">Deep purple</dt>
+                  <dd class="color__phone-color">Темно-фиолетовый</dd>
+                </dl>
+              </figure>
+            </a>
+          </li>
+          <!-- COLOR__PHONE -->
+          <li class="color__phone">
+            <a class="color__phone-link" href="#">
+              <figure class="color__figure">
+                <img class="color__img" src="images/color/3.jpg" alt="Золотой iphone">
+                <dl class="color__descr-li">
+                  <dt class="color__phone-title">Gold</dt>
+                  <dd class="color__phone-color">Золотой</dd>
+                </dl>
+              </figure>
+            </a>
+          </li>
+          <!-- COLOR__PHONE -->
+          <li class="color__phone">
+            <a class="color__phone-link" href="#">
+              <figure class="color__figure">
+                <img class="color__img" src="images/color/4.jpg" alt="Космический черный iphone">
+                <dl class="color__descr-li">
+                  <dt class="color__phone-title">Space Black</dt>
+                  <dd class="color__phone-color">Космический черный</dd>
+                </dl>
+              </figure>
+            </a>
+          </li>
+          <!-- COLOR__PHONE -->
+        </ul>
+        <!-- COLOR__PHONES-LIST -->
+      </div>
+    </section>
+    <!-- COLOR -->
+    <!-- WANT -->
+    <section class="want" id="want">
+      <div class="container">
+        <!-- WANT__INNER -->
+        <div class="want__inner">
+          <!-- WANT__COL -->
+          <div class="want__col">
+            <div class="want__form-wrapper">
+              <!-- WANT__FORM -->
+              <form class="want__form" action="#">
+                <!-- WANT__TITLE -->
+                <div class="want__title wrapper">
+                  <h2 class="title title--white want__title">
+                    ХОЧЕШЬ IPHONE 14 PRO?
+                  </h2>
+                </div>
+                <!-- WANT__LABEL -->
+                <label class="want__label">
+                  <input class="want__input" type="text" placeholder=" ">
+                  <span class="want__label-span">
+                    Ваше имя
+                  </span>
+                </label>
+                <!-- WANT__LABEL -->
+                <label class="want__label">
+                  <input class="want__input" type="text" placeholder=" ">
+                  <span class="want__label-span">
+                    Номер телефона
+                  </span>
+                </label>
+                <!-- WANT__TEXT -->
+                <p class="want__text">
+                  В ближайшее время наш менеджер свяжется с Вами
+                </p>
+                <!-- WANT__BTN -->
+                <div class="want__btn-wrapper">
+                  <button class="want__btn" type="submit">ЗАКАЗАТЬ</button>
+                </div>
+              </form>
+              <!-- WANT__FORM -->
+            </div>
+          </div>
+          <!-- WANT__COL -->
+          <div class="want__col">
+            <!-- WANT__IMG -->
+            <div class="want__img-wrapper">
+              <img class="want__img" src="images/want/main.jpg" alt="Iphone">
+            </div>
+          </div>
+          <!-- WANT__COL -->
+        </div>
+        <!-- WANT__INNER -->
+      </div>
+    </section>
+    <!-- WANT -->
   </main>
+  <!-- MAIN -->
+  <!-- FOOTER -->
+  <footer class="footer page__footer">
+    <div class="container">
+      <!-- FOOTER__INNER -->
+      <div class="footer__inner">
+        <!-- FOOTER__NAV -->
+        <nav class="footer__nav">
+          <!-- FOOTER__PRIVACY -->
+          <div class="footer__privacy">
+            <a class="footer__privacy-link" href="#">
+              Политика конфиденциальности
+            </a>
+          </div>
+          <!-- FOOTER__PRIVACY -->
+          <a class="footer__logo" href="/">
+            <svg-to-inline class-name="footer__logo-img" path="images/global/logo.svg" lazy="true"
+              loading-label="Loading" alt="Логотип сайта"></svg-to-inline>
+          </a>
+          <div class="footer__phone">
+            <a class="footer__phone-link" href="tel:380504565656">
+              +38 050-456-56-56
+            </a>
+          </div>
+        </nav>
+        <!-- FOOTER__NAV -->
+      </div>
+      <!-- FOOTER__INNER -->
+    </div>
+  </footer>
+  <!-- FOOTER -->
 
   <script src="js/main.min.js"></script>
 </body>
+<!-- PAGE -->
 
 </html>

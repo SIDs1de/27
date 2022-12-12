@@ -33,16 +33,22 @@ body {
 }
 // ----- PAGE -----
 .page {
+  &._fixed {
+    overflow: hidden;
+  }
   &__header {
   }
 }
 // ----- PAGE -----
-// ----- HEADER -----
-.header {
-  padding: 33px 0;
+// ----- HEADER, FOOTER -----
+.header,
+.footer {
+  @include adaptive-value("padding-top", 33, 20, 1);
+  @include adaptive-value("padding-bottom", 33, 20, 1);
   background-color: $black;
   color: $gray;
   font-size: 24px;
+  @include adaptive-value("font-size", 24, 16, 1);
   line-height: calc(29 / 24);
   &__inner {
   }
@@ -70,33 +76,30 @@ body {
       background-color: $gray;
       transition: width 0.2s, color 0.2s;
     }
-    &:hover {
-      color: #fff;
-      &::after {
-        width: 100%;
-        background-color: #fff;
-      }
-    }
   }
   &__logo {
+    width: 40px;
+    height: 48px;
+    position: relative;
+    z-index: 101;
   }
   &__logo-img {
+    width: 40px;
+    height: 48px;
     path {
       transition: fill 0.2s;
-    }
-    &:hover {
-      path {
-        fill: #fff;
-      }
     }
   }
   &__phone {
     flex: 1 0 0;
     text-align: right;
+    position: relative;
+    z-index: 101;
   }
   &__phone-link {
     transition: color 0.2s;
     position: relative;
+    @include adaptive-value("font-size", 24, 16, 1);
     &::after {
       content: "";
       position: absolute;
@@ -108,20 +111,21 @@ body {
       background-color: $gray;
       transition: width 0.2s, color 0.2s;
     }
-    &:hover {
-      color: #fff;
-      &::after {
-        width: 100%;
-        background-color: #fff;
-      }
-    }
   }
 }
-// ----- HEADER -----
+// ----- HEADER, FOOTER -----
 // ----- MAIN -----
 .main {
   &__cover {
-    padding: 70px 0 40px;
+    @include adaptive-value("padding-top", 70, 30, 1);
+    @include adaptive-value("padding-bottom", 40, 20, 1);
+  }
+  &__new {
+    @include adaptive-value("padding-top", 87, 40, 1);
+    @include adaptive-value("padding-bottom", 150, 50, 1);
+  }
+  &__color {
+    padding: 0 0 150px;
   }
 }
 // ----- MAIN -----
@@ -130,17 +134,18 @@ body {
   background-color: #f5f5f7;
   &__title-wrapper {
     text-align: center;
-    margin-bottom: 40px;
+    @include adaptive-value("margin-bottom", 40, 20, 1);
   }
   &__title {
     font-weight: 700;
-    font-size: 64px;
-    line-height: 77px;
+    @include adaptive-value("font-size", 64, 37, 1);
+    line-height: calc(77 / 64);
     color: $purple;
+    text-transform: uppercase;
   }
   &__img-wrapper {
     text-align: center;
-    margin-bottom: 25px;
+    @include adaptive-value("margin-bottom", 25, 18, 1);
   }
   &__img {
   }
@@ -149,20 +154,256 @@ body {
   }
   &__btn {
     font-weight: 700;
-    font-size: 24px;
+    @include adaptive-value("font-size", 24, 16, 1);
     line-height: calc(29 / 24);
     color: #fff;
-    padding: 22px 117px 19px;
+    padding-top: 22px;
+    padding-left: 117px;
+    padding-right: 117px;
+    padding-bottom: 19px;
+    @include adaptive-value("padding-top", 22, 15, 1);
+    @include adaptive-value("padding-bottom", 22, 15, 1);
+    @include adaptive-value("padding-left", 117, 60, 1);
+    @include adaptive-value("padding-right", 117, 60, 1);
     background-color: $purple;
     border-radius: 30px;
     cursor: pointer;
     border: none;
-    transition: background-color .2s;
-    &:hover {
-      background-color: darken($purple, 10%);
-    }
+    transition: background-color 0.2s;
+    text-transform: uppercase;
   }
 }
 // ----- COVER -----
+// ----- NEW -----
+.new {
+  &__title-wrapper {
+  }
+  &__title {
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  &__col {
+  }
+  &__info {
+    flex: 0 0 calc(50% - 40px);
+  }
+  &__par {
+    @include adaptive-value("font-size", 14, 11, 1);
+    line-height: 1.3;
+    color: $black;
+  }
+  &__par + &__par {
+    @include adaptive-value("margin-top", 30, 15, 1);
+  }
+  &__par-bold {
+    font-weight: 700;
+    @include adaptive-value("font-size", 20, 13, 1);
+  }
+  &__phone {
+    flex: 0 1 40%;
+    @include adaptive-value("padding-right", 100, -700, 1);
+  }
+  &__img-wrapper {
+    display: flex;
+    justify-content: end;
+  }
+  &__img {
+  }
+}
+// ----- NEW -----
+// ----- COLOR -----
+.color {
+  &__title-wrapper {
+  }
+  &__title {
+  }
+  &__phones-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  &__phone {
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  &__img {
+    @include adaptive-value("margin-bottom", 20, 10, 1);
+  }
+  &__descr-li {
+    margin: 0;
+  }
+  &__phone-title {
+    @include adaptive-value("margin-bottom", 10, 5, 1);
+    font-weight: 700;
+    @include adaptive-value("font-size", 20, 18, 1);
+    line-height: 1.3;
+    color: $black;
+  }
+  &__phone-color {
+    margin: 0;
+    @include adaptive-value("font-size", 14, 13, 1);
+    line-height: 1.3;
+    color: $black;
+  }
+}
+// ----- COLOR -----
+// ----- WANT -----
+.want {
+  &__inner {
+    display: flex;
+  }
+  &__col {
+    flex: 0 0 50%;
+  }
+  &__form-wrapper {
+    background-color: $deep-purple;
+    height: 100%;
+    padding-top: 137px;
+    @include adaptive-value("padding-top", 137, 50, 1);
+    @include adaptive-value("padding-bottom", 40, 30, 1);
+    @include adaptive-value("padding-left", 93, 15, 1);
+    @include adaptive-value("padding-right", 93, 15, 1);
+  }
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-weight: 700;
+    line-height: calc(39 / 32);
+    color: #fff;
+    @include adaptive-value("margin-bottom", 72, 30, 1);
+  }
+  &__label {
+    @include adaptive-value("margin-bottom", 30, 15, 1);
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  &__label-span {
+    @include adaptive-value("font-size", 14, 12, 1);
+    line-height: 1.3;
+    color: #fff;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    pointer-events: none;
+    transition: transform 0.1s;
+    transform-origin: top left;
+  }
+  &__input {
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #f5f5f5;
+    color: #fff;
+    @include adaptive-value("font-size", 14, 12, 1);
+    line-height: 1.3;
+    width: 100%;
+    height: 28px;
+    &:focus,
+    &:not(:placeholder-shown) {
+      & + .want__label-span {
+        transform: translateY(-90%) scale(0.8);
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+    @include adaptive-value("font-size", 14, 12, 1);
+    line-height: 1.3;
+    color: rgba(#fff, 0.5);
+    @include adaptive-value("margin-bottom", 30, 15, 1);
+  }
+  &__btn-wrapper {
+    display: block;
+    text-align: center;
+  }
+  &__btn {
+    font-weight: 700;
+    @include adaptive-value("font-size", 14, 12, 1);
+    line-height: 1.3;
+    color: $purple;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include adaptive-value("padding-top", 16, 10, 1);
+    @include adaptive-value("padding-bottom", 16, 10, 1);
+    @include adaptive-value("padding-left", 81, 50, 1);
+    @include adaptive-value("padding-right", 81, 50, 1);
+    background: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  &__img-wrapper {
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+// ----- WANT -----
+// ----- FOOTER -----
+.footer {
+  &__privacy {
+    display: flex;
+    gap: 30px;
+    flex: 1 0 0;
+  }
+  &__privacy-link {
+    @include adaptive-value("font-size", 14, 12, 1);
+    line-height: 1.3;
+    color: $gray;
+    position: relative;
+    transition: color 0.2s;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 0;
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      background-color: $gray;
+      transition: width 0.2s, color 0.2s;
+    }
+  }
+}
+// ----- FOOTER -----
+// ----- SCROLLBAR -----
+*::-webkit-scrollbar {
+  width: 10px; /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+  background: #fff; /* цвет дорожки */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #cacaca; /* цвет плашки */
+  &:hover {
+    background-color: #a8a8a8;
+  }
+  &:active {
+    background-color: #666666;
+  }
+  border-radius: 20px;
+  border: 1px solid #fff; /* padding вокруг плашки */
+}
+// ----- SCROLLBAR -----
 
 @import "media";
