@@ -11,7 +11,7 @@
 @media (max-width: 1150px) {
   .color {
     &__phones-list {
-      max-width: 800px;
+      max-width: calc(800 / 16) + rem;
       margin: 0 auto;
     }
     &__phone {
@@ -38,13 +38,13 @@
     }
     &__info {
       flex: 1 0 auto;
-      max-width: 700px;
+      max-width: calc(700 / 16) + rem;
       margin: 0 auto;
     }
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 821px) {
   .burger {
     display: none;
   }
@@ -58,22 +58,22 @@
     &__menu {
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      right: 0;
+      width: 80%;
       height: 100%;
-      background-color: rgba(#000, .9);
+      background-color: #000;
       z-index: 100;
       transition: transform 0.4s;
-      transform: translateY(-100%);
+      transform: translateX(100%);
       justify-content: center;
       align-items: center;
       flex-direction: column;
       &._open {
-        transform: translateY(0);
+        transform: translateX(0);
       }
     }
     &__item {
-      font-size: 36px;
+      font-size: calc(36 / 16) + rem;
       color: #fff;
     }
     &__phone {
@@ -87,10 +87,12 @@
   .footer {
     &__item {
       &:hover {
+        transition: color 0.2s;
         color: #fff;
         &::after {
           width: 100%;
           background-color: #fff;
+          transition: width 0.2s, color 0.2s;
         }
       }
     }
@@ -98,15 +100,18 @@
       &:hover {
         path {
           fill: #fff;
+          transition: fill 0.2s;
         }
       }
     }
     &__phone-link {
       &:hover {
         color: #fff;
+        transition: color 0.2s;
         &::after {
           width: 100%;
           background-color: #fff;
+          transition: color 0.2s, width 0.2s;
         }
       }
     }
@@ -122,9 +127,11 @@
     &__privacy-link {
       &:hover {
         color: #fff;
+        transition: color 0.2s;
         &::after {
           width: 100%;
           background-color: #fff;
+          transition: color 0.2s, width 0.2s;
         }
       }
     }
@@ -143,7 +150,7 @@
   .footer {
     &__nav {
       flex-direction: column;
-      gap: 20px;
+      gap: calc(20 / 16) + rem;
     }
     &__logo,
     &__privacy,
@@ -159,7 +166,7 @@
 @media (max-width: 500px) {
   .header {
     &__nav {
-      gap: 20px;
+      gap: calc(20 / 16) + rem;
     }
     &__logo {
       transform: scale(0.6);
