@@ -58,7 +58,12 @@
 </head>
 <!-- PAGE -->
 
-<body class="page">
+<body class="page _locked">
+  <div class="loader">
+    <div class="loader__circle-wrapper">
+      <img class="loader__circle" src="images/global/loader.svg" alt="Загрузка, подождите">
+    </div>
+  </div>
   <!-- HEADER -->
   <header class="header page__header">
     <div class="container">
@@ -85,7 +90,6 @@
           <a class="header__logo" href="/">
             <svg-to-inline class-name="header__logo-img" path="images/global/logo.svg" lazy="true"
               loading-label="Loading" alt="Логотип сайта"></svg-to-inline>
-            <!-- <img class="header__logo-img" src="images/global/logo.svg" alt=""> -->
           </a>
           <div class="header__phone">
             <a class="header__phone-link" href="tel:380504565656">
@@ -107,7 +111,7 @@
   <!-- MAIN -->
   <main class="main">
     <!-- COVER -->
-    <section class="cover main__cover">
+    <section class="cover main__cover screen">
       <div class="container">
         <!-- COVER__TITLE -->
         <div class="cover__title-wrapper">
@@ -130,7 +134,7 @@
     <!-- COVER -->
 
     <!-- NEW -->
-    <section class="new main__new" id="new">
+    <section class="new main__new screen" id="new">
       <div class="container">
         <!-- NEW__TITLE -->
         <div class="new__title-wrapper title-wrapper">
@@ -167,7 +171,7 @@
           <div class="new__col new__phone">
             <!-- NEW__IMG -->
             <div class="new__img-wrapper">
-              <img class="new__img" src="images/new/phone.jpg" alt="Ihpone 14 Pro">
+              <img class="new__img" src="images/new/phone.jpg" alt="Ihpone 14 Pro" loading="lazy">
             </div>
           </div>
         </div>
@@ -175,7 +179,7 @@
     </section>
     <!-- NEW -->
     <!-- COLOR -->
-    <section class="color main__color" id="color">
+    <section class="color main__color screen" id="color">
       <div class="container">
         <!-- COLOR__TITLE -->
         <div class="color__title-wrapper title-wrapper">
@@ -189,11 +193,13 @@
           <li class="color__phone">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
-                <img class="color__img" src="images/color/1.jpg" alt="Серебристый iphone">
-                <dl class="color__descr-li">
-                  <dt class="color__phone-title">Silver</dt>
-                  <dd class="color__phone-color">Серебристый</dd>
-                </dl>
+                <img class="color__img" src="images/color/1.jpg" alt="Серебристый iphone" loading="lazy">
+                <figcaption class="color__figcaption">
+                  <dl class="color__descr-li">
+                    <dt class="color__phone-title">Silver</dt>
+                    <dd class="color__phone-color">Серебристый</dd>
+                  </dl>
+                </figcaption>
               </figure>
             </a>
           </li>
@@ -201,11 +207,13 @@
           <li class="color__phone">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
-                <img class="color__img" src="images/color/2.jpg" alt="Тёмно-фиолетовый iphone">
-                <dl class="color__descr-li">
-                  <dt class="color__phone-title">Deep purple</dt>
-                  <dd class="color__phone-color">Темно-фиолетовый</dd>
-                </dl>
+                <img class="color__img" src="images/color/2.jpg" alt="Тёмно-фиолетовый iphone" loading="lazy">
+                <figcaption class="color__figcaption">
+                  <dl class="color__descr-li">
+                    <dt class="color__phone-title">Deep purple</dt>
+                    <dd class="color__phone-color">Темно-фиолетовый</dd>
+                  </dl>
+                </figcaption>
               </figure>
             </a>
           </li>
@@ -213,11 +221,13 @@
           <li class="color__phone">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
-                <img class="color__img" src="images/color/3.jpg" alt="Золотой iphone">
-                <dl class="color__descr-li">
-                  <dt class="color__phone-title">Gold</dt>
-                  <dd class="color__phone-color">Золотой</dd>
-                </dl>
+                <img class="color__img" src="images/color/3.jpg" alt="Золотой iphone" loading="lazy">
+                <figcaption class="color__figcaption">
+                  <dl class="color__descr-li">
+                    <dt class="color__phone-title">Gold</dt>
+                    <dd class="color__phone-color">Золотой</dd>
+                  </dl>
+                </figcaption>
               </figure>
             </a>
           </li>
@@ -225,11 +235,13 @@
           <li class="color__phone">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
-                <img class="color__img" src="images/color/4.jpg" alt="Космический черный iphone">
-                <dl class="color__descr-li">
-                  <dt class="color__phone-title">Space Black</dt>
-                  <dd class="color__phone-color">Космический черный</dd>
-                </dl>
+                <img class="color__img" src="images/color/4.jpg" alt="Космический черный iphone" loading="lazy">
+                <figcaption class="color__figcaption">
+                  <dl class="color__descr-li">
+                    <dt class="color__phone-title">Space Black</dt>
+                    <dd class="color__phone-color">Космический черный</dd>
+                  </dl>
+                </figcaption>
               </figure>
             </a>
           </li>
@@ -240,7 +252,7 @@
     </section>
     <!-- COLOR -->
     <!-- WANT -->
-    <section class="want" id="want">
+    <section class="want screen" id="want">
       <div class="container">
         <!-- WANT__INNER -->
         <div class="want__inner">
@@ -285,7 +297,7 @@
           <div class="want__col">
             <!-- WANT__IMG -->
             <div class="want__img-wrapper">
-              <img class="want__img" src="images/want/main.jpg" alt="Iphone">
+              <img class="want__img" src="images/want/main.jpg" alt="Iphone" loading="lazy">
             </div>
           </div>
           <!-- WANT__COL -->
@@ -327,6 +339,13 @@
   </footer>
   <!-- FOOTER -->
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"
+    integrity="sha512-qRj8N7fxOHxPkKjnQ9EJgLJ8Ng1OK7seBn1uk8wkqaXpa7OA13LO6txQ7+ajZonyc9Ts4K/ugXljevkFTUGBcw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.min.js"></script>
 </body>
 <!-- PAGE -->
