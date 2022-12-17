@@ -168,20 +168,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const resize = () => {
     window.addEventListener('resize', () => {
       swipe()
-      const slides = document.querySelectorAll(".screen_animate")
-      slides.forEach(slide => {
-        if (slide.scrollHeight >= window.innerHeight - document.querySelector('.header').scrollHeight) {
-          window.location.reload()
-        }
-      })
+      // const slides = document.querySelectorAll(".screen_animate")
+      // slides.forEach(slide => {
+      //   if (slide.scrollHeight >= window.innerHeight - document.querySelector('.header').scrollHeight) {
+      //     window.location.reload()
+      //   }
+      // })
 
-      const slides2 = document.querySelectorAll('.screen')
-      slides2.forEach(slide => {
-        if (slide.scrollHeight < window.innerHeight - document.querySelector('.header').scrollHeight && !(slide.classList.contains('screen_animate'))) {
-          window.location.reload()
-        }
-      })
-      animationsOnScroll()
+      // const slides2 = document.querySelectorAll('.screen')
+      // slides2.forEach(slide => {
+      //   if (slide.scrollHeight < window.innerHeight - document.querySelector('.header').scrollHeight && !(slide.classList.contains('screen_animate'))) {
+      //     window.location.reload()
+      //   }
+      // })
+      // animationsOnScroll()
     })
   }
 
