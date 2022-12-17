@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (slides[i].scrollHeight >= window.innerHeight - document.querySelector('.header').scrollHeight) {
         slides[i].classList.remove('screen_animate')
         slides[i].style.position = 'relative'
-        slides[i].style.zIndex = 10
+        slides[i].style.zIndex = 1
       } else {
         slides[i].style.zIndex = 1
         slides[i].classList.add('screen_animate')
