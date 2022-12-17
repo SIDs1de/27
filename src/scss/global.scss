@@ -3,14 +3,44 @@
   width: 100%;
   display: inline-block;
   @include adaptive-value("margin-bottom", 50, 20, 1);
+  text-align: center;
+  position: relative;
 }
 
 .title {
-  text-align: center;
   font-weight: 700;
   @include adaptive-value("font-size", 32, 22, 1);
   line-height: calc(39 / 32);
   color: $gray;
+  display: inline-block;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $gray;
+    transition: all 0.4s;
+  }
+  &:hover {
+    &::before {
+      transition: all 0.2s;
+      opacity: 1;
+      bottom: -2px;
+    }
+  }
+}
+
+.white-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
 }
 
 .burger {

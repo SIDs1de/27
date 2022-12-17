@@ -54,6 +54,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="css/main.min.css" rel="stylesheet">
 </head>
 <!-- PAGE -->
@@ -65,7 +68,7 @@
     </div>
   </div>
   <!-- HEADER -->
-  <header class="header page__header">
+  <header class="header page__header animate__animated animate__fadeIn">
     <div class="container">
       <!-- HEADER__INNER -->
       <div class="header__inner">
@@ -115,16 +118,17 @@
       <div class="container">
         <!-- COVER__TITLE -->
         <div class="cover__title-wrapper">
-          <h1 class="cover__title">
+          <h1 class="cover__title wow animate__animated animate__fadeIn" data-wow-delay=".5s"
+            data-wow-duration=".4s">
             IPHONE 14 PRO
           </h1>
         </div>
         <!-- COVER__IMG -->
-        <div class="cover__img-wrapper">
+        <div class="cover__img-wrapper wow animate__animated animate__fadeIn" data-wow-duration="3s">
           <img class="cover__img" src="images/cover/iphones.png" alt="Айфоны в разных цветах">
         </div>
         <!-- COVER__BTN -->
-        <div class="cover__btn-wrapper">
+        <div class="cover__btn-wrapper wow animate__animated animate__fadeInLeft">
           <button class="cover__btn" type="button">
             ВЫБРАТЬ
           </button>
@@ -141,25 +145,26 @@
           <h2 class="title new__title">
             ЧТО НОВОГО
           </h2>
+          <span class="white-block new__white-block"></span>
         </div>
         <!-- NEW__INNER -->
         <div class="new__inner">
           <!-- NEW__COL -->
           <div class="new__col new__info">
-            <p class="new__par">
+            <p class="new__par wow animate__animated animate__fadeInUp">
               Все модели оснащены однокристальной системой A16 Bionic, 48-мегапиксельной основной камерой и экранами
               ProMotion с защитой Ceramic Shield и частотным диапазоном 1 — 120 Гц, а также ускоренной памятью LPDDR5.
               Дизайн линейки обновлен, на фронтальной панели смартфонов два выреза.
             </p>
-            <p class="new__par">
+            <p class="new__par wow animate__animated animate__fadeInUp">
               Все iPhone 14 в США будут продаваться без лотка для SIM-карт: производитель заявляет, что улучшенная
               технология eSIM позволит перенести старые электронные сим-карты на новые смартфоны.
             </p>
-            <p class="new__par">
+            <p class="new__par wow animate__animated animate__fadeInUp">
               Обновлены фронтальная камера (она снабжена автофокусом и быстрее распознает пользователя в условиях
               недостаточной освещенности) и сенсор основной камеры.
             </p>
-            <p class="new__par">
+            <p class="new__par wow animate__animated animate__fadeInUp">
               <b class="new__par-bold">
                 iPhone 14 Pro вышел в новом дизайне — без фирменной «челки». Также в ассортименте появился новый цвет. В
                 смартфоне, в отличие от «обычных» 14-х айфонов, установлен процессор A16 Bionic, который может за
@@ -170,7 +175,7 @@
           <!-- NEW__COL -->
           <div class="new__col new__phone">
             <!-- NEW__IMG -->
-            <div class="new__img-wrapper">
+            <div class="new__img-wrapper wow animate__animated animate__fadeInRight">
               <img class="new__img" src="images/new/phone.jpg" alt="Ihpone 14 Pro" loading="lazy">
             </div>
           </div>
@@ -186,16 +191,17 @@
           <h2 class="title color__title">
             ВЫБЕРИ СВОЙ ЦВЕТ
           </h2>
+          <span class="white-block new__white-block"></span>
         </div>
         <!-- COLOR__PHONES-LIST -->
         <ul class="color__phones-list">
           <!-- COLOR__PHONE -->
-          <li class="color__phone">
+          <li class="color__phone wow animate__animated animate__fadeIn">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
                 <img class="color__img" src="images/color/1.jpg" alt="Серебристый iphone" loading="lazy">
                 <figcaption class="color__figcaption">
-                  <dl class="color__descr-li">
+                  <dl class="color__descr-li wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
                     <dt class="color__phone-title">Silver</dt>
                     <dd class="color__phone-color">Серебристый</dd>
                   </dl>
@@ -204,12 +210,12 @@
             </a>
           </li>
           <!-- COLOR__PHONE -->
-          <li class="color__phone">
+          <li class="color__phone wow animate__animated animate__fadeIn" data-wow-delay=".1s">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
                 <img class="color__img" src="images/color/2.jpg" alt="Тёмно-фиолетовый iphone" loading="lazy">
                 <figcaption class="color__figcaption">
-                  <dl class="color__descr-li">
+                  <dl class="color__descr-li wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
                     <dt class="color__phone-title">Deep purple</dt>
                     <dd class="color__phone-color">Темно-фиолетовый</dd>
                   </dl>
@@ -218,12 +224,12 @@
             </a>
           </li>
           <!-- COLOR__PHONE -->
-          <li class="color__phone">
+          <li class="color__phone wow animate__animated animate__fadeIn" data-wow-delay=".2s">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
                 <img class="color__img" src="images/color/3.jpg" alt="Золотой iphone" loading="lazy">
                 <figcaption class="color__figcaption">
-                  <dl class="color__descr-li">
+                  <dl class="color__descr-li wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
                     <dt class="color__phone-title">Gold</dt>
                     <dd class="color__phone-color">Золотой</dd>
                   </dl>
@@ -232,12 +238,12 @@
             </a>
           </li>
           <!-- COLOR__PHONE -->
-          <li class="color__phone">
+          <li class="color__phone wow animate__animated animate__fadeIn" data-wow-delay=".3s">
             <a class="color__phone-link" href="#">
               <figure class="color__figure">
                 <img class="color__img" src="images/color/4.jpg" alt="Космический черный iphone" loading="lazy">
                 <figcaption class="color__figcaption">
-                  <dl class="color__descr-li">
+                  <dl class="color__descr-li wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
                     <dt class="color__phone-title">Space Black</dt>
                     <dd class="color__phone-color">Космический черный</dd>
                   </dl>
@@ -262,20 +268,20 @@
               <!-- WANT__FORM -->
               <form class="want__form" action="#">
                 <!-- WANT__TITLE -->
-                <div class="want__title wrapper">
+                <div class="want__title title-wrapper wow animate__animated animate__fadeInUp">
                   <h2 class="title title--white want__title">
                     ХОЧЕШЬ IPHONE 14 PRO?
                   </h2>
                 </div>
                 <!-- WANT__LABEL -->
-                <label class="want__label">
+                <label class="want__label wow animate__animated animate__fadeIn">
                   <input class="want__input" type="text" placeholder=" ">
                   <span class="want__label-span">
                     Ваше имя
                   </span>
                 </label>
                 <!-- WANT__LABEL -->
-                <label class="want__label">
+                <label class="want__label wow animate__animated animate__fadeIn">
                   <input class="want__input" type="text" placeholder=" ">
                   <span class="want__label-span">
                     Номер телефона
@@ -286,7 +292,7 @@
                   В ближайшее время наш менеджер свяжется с Вами
                 </p>
                 <!-- WANT__BTN -->
-                <div class="want__btn-wrapper">
+                <div class="want__btn-wrapper wow animate__animated animate__fadeInDown">
                   <button class="want__btn" type="submit">ЗАКАЗАТЬ</button>
                 </div>
               </form>
@@ -294,7 +300,7 @@
             </div>
           </div>
           <!-- WANT__COL -->
-          <div class="want__col">
+          <div class="want__col wow animate__animated animate__fadeIn">
             <!-- WANT__IMG -->
             <div class="want__img-wrapper">
               <img class="want__img" src="images/want/main.jpg" alt="Iphone" loading="lazy">
@@ -309,7 +315,7 @@
   </main>
   <!-- MAIN -->
   <!-- FOOTER -->
-  <footer class="footer page__footer">
+  <footer class="footer page__footer wow animate__animated animate__fadeIn">
     <div class="container">
       <!-- FOOTER__INNER -->
       <div class="footer__inner">
@@ -339,9 +345,12 @@
   </footer>
   <!-- FOOTER -->
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"
     integrity="sha512-qRj8N7fxOHxPkKjnQ9EJgLJ8Ng1OK7seBn1uk8wkqaXpa7OA13LO6txQ7+ajZonyc9Ts4K/ugXljevkFTUGBcw=="
