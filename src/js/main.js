@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollContainer: null,    // optional scroll container selector, otherwise use window,
       resetAnimation: true,     // reset animation on end (default is true)
     }
-  );
-  wow.init();
+  )
+  wow.init()
   const openCloseMenu = (burgerBtn, headerMenu, body) => {
     if (!headerMenu.classList.contains('_open')) {
       gsap.from(".header__item-link", {
@@ -54,25 +54,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"').forEach(link => {
       link.addEventListener('click', function (e) {
         e.preventDefault()
-
-        headerMenu.classList.remove('_open')
-        body.classList.remove('_fixed')
-        if (burgerBtn.classList.contains('_open')) {
-          burgerBtn.classList.replace('_open', '_close')
-        }
-
-        const href = this.getAttribute('href').substring(1)
-
-        const scrollTarget = document.getElementById(href)
-
-        const topOffset = 70
-        const elementPosition = scrollTarget.getBoundingClientRect().top
-        const offsetPosition = elementPosition - topOffset
-        console.log(offsetPosition)
-        window.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
+        window.scrollTo({
+          top: 0
         })
+        setTimeout(() => {
+          headerMenu.classList.remove('_open')
+          body.classList.remove('_fixed')
+          if (burgerBtn.classList.contains('_open')) {
+            burgerBtn.classList.replace('_open', '_close')
+          }
+
+          const href = this.getAttribute('href').substring(1)
+
+          const scrollTarget = document.getElementById(href)
+
+          const topOffset = 70
+          const elementPosition = scrollTarget.getBoundingClientRect().top
+          const offsetPosition = elementPosition - topOffset
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }, 50)
       })
     })
   }
