@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <title>Видеопотоки</title>
+</head>
+
+<body>
+  <main class="main mb-5">
+    <div class="container">
+      <div class="row mt-4 justify-content-center gap-3">
+        <button type="button" class="btn btn-success col-md-3 col-10 offset-1" data-cam="1">
+          RU LT Чернышевское - въезд со стороны
+          России
+        </button>
+        <button type="button" class="btn btn-success col-md-3 col-10 offset-1" data-cam="2">
+          RU LT Чернышевское - въезд в Литву со
+          стороны России
+        </button>
+        <button type="button" class="btn btn-success col-md-3 col-10 offset-1" data-cam="3">
+          RU PL Мамоново-Гжехотки - въезд в Польшу
+          со стороны России
+        </button>
+        <button type="button" class="btn btn-success col-md-3 col-10 offset-1" data-cam="4">
+          RU PL Мамоново-Гроново - въезд в Польшу со
+          стороны России
+        </button>
+        <button type="button" class="btn btn-success col-md-3 col-10 offset-1" data-cam="5">
+          RU PL Багратионовск - въезд в Польшу со
+          стороны России
+        </button>
+      </div>
+
+      <div class="camera-group">
+        <h1 class="text-center mt-5">RU LT Чернышевское - въезд со стороны
+          России</h1>
+        <video class="video-js mt-4 vjs-theme-forest col-md-10 offset-md-1 justify-content-center mx-auto" controls
+          height="1000" poster="img/road.jpg" preload="true" data-setup="{}">
+          <source src="https://media.gov39.ru/webcam-rec/mapp_chernyshevskoe.stream/playlist.m3u8"
+            type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            Чтобы просмотреть это видео, пожалуйста, включите JavaScript и рассмотрите возможность обновления
+            веб-браузера
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <div class="text-center justify-content-center mt-3 mb-3">
+          <button class="btn btn-primary draw col-md-2 col-10" data-draw="1">Сделать скриншот</button>
+        </div>
+        <a class="download" href="" download>
+          <img class="my-img" src="" alt="">
+        </a>
+      </div>
+
+      <div class="camera-group">
+        <h1 class="text-center mt-5">RU LT Чернышевское - въезд в Литву со
+          стороны России</h1>
+        <video class="video-js mt-4 vjs-theme-forest col-md-10 mx-auto offset-md-1 justify-content-center" controls
+          poster="img/road.jpg" preload="true" data-setup="{}">
+          <source src="https://media.gov39.ru/webcam-rec/mapp_chernyshevskoe2.stream/playlist.m3u8"
+            type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            Чтобы просмотреть это видео, пожалуйста, включите JavaScript и рассмотрите возможность обновления
+            веб-браузера
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <div class="text-center justify-content-center mt-3 mb-3">
+          <button class="btn btn-primary draw col-md-2 col-10" data-draw="1">Сделать скриншот</button>
+        </div>
+        <a class="download" href="" download>
+          <img class="my-img" src="" alt="">
+        </a>
+      </div>
+
+      <div class="camera-group">
+        <h1 class="text-center mt-5">RU PL Мамоново-Гжехотки - въезд в Польшу
+          со стороны России</h1>
+        <video class="video-js mt-4 vjs-theme-forest col-md-10 offset-md-1 justify-content-center mx-auto" controls
+          poster="img/road.jpg" preload="true" data-setup="{}">
+          <source src="https://media.gov39.ru/webcam-rec/mapp_gzhehodki.stream/playlist.m3u8"
+            type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            Чтобы просмотреть это видео, пожалуйста, включите JavaScript и рассмотрите возможность обновления
+            веб-браузера
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <div class="text-center justify-content-center mt-3 mb-3">
+          <button class="btn btn-primary draw col-md-2 col-10" data-draw="1">Сделать скриншот</button>
+        </div>
+        <a class="download" href="" download>
+          <img class="my-img" src="" alt="">
+        </a>
+      </div>
+
+      <div class="camera-group">
+        <h1 class="text-center mt-5">RU PL Мамоново-Гроново - въезд в Польшу со
+          стороны России</h1>
+        <video class="video-js mt-4 vjs-theme-forest col-md-10 offset-md-1 justify-content-center mx-auto" controls
+          poster="img/road.jpg" preload="true" data-setup="{}">
+          <source src="https://media.gov39.ru/webcam-rec/mapp_gronovo.stream/playlist.m3u8"
+            type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            Чтобы просмотреть это видео, пожалуйста, включите JavaScript и рассмотрите возможность обновления
+            веб-браузера
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <div class="text-center justify-content-center mt-3 mb-3">
+          <button class="btn btn-primary draw col-md-2 col-10" data-draw="1">Сделать скриншот</button>
+        </div>
+        <a class="download" href="" download>
+          <img class="my-img" src="" alt="">
+        </a>
+      </div>
+
+      <div class="camera-group">
+        <h1 class="text-center mt-5">RU PL Багратионовск - въезд в Польшу со
+          стороны России</h1>
+        <video class="video-js mt-4 vjs-theme-forest col-md-10 offset-md-1 justify-content-center mx-auto" controls
+          poster="img/road.jpg" preload="true" data-setup="{}">
+          <source src="https://media.gov39.ru/webcam-rec/mapp_bagrat.stream/playlist.m3u8" type="application/x-mpegURL">
+          <p class="vjs-no-js">
+            Чтобы просмотреть это видео, пожалуйста, включите JavaScript и рассмотрите возможность обновления
+            веб-браузера
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <div class="text-center justify-content-center mt-3 mb-3">
+          <button class="btn btn-primary draw col-md-2 col-10" data-draw="1">Сделать скриншот</button>
+        </div>
+        <a class="download" href="" download>
+          <img class="my-img" src="" alt="">
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.12.1/lang/ru.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
