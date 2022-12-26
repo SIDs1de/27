@@ -21,9 +21,18 @@ videos.forEach(video => {
 
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    videojs(document.querySelector('.video-js', {
-      language: 'ru'
-    }))
+    const vs = document.querySelectorAll('.video-js');
+    vs.forEach(v => {
+      let player = videojs(v, {
+        language: 'ru',
+      });
+
+      player.logo({
+        image: 'img/favicon/favicon.ico',
+        fadeDelay: null,
+      })
+    })
+
 
     const cams = document.querySelectorAll('main .row button.btn-success');
     const groups = document.querySelectorAll('.camera-group');
@@ -49,10 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btnDraws.forEach(btnDraw => {
       btnDraw.addEventListener('click', (e) => {
         const num = btnDraw.dataset.draw
-        var canvas = document.createElement('canvas')
+        var canvas = document.querySelector('#canvas')
         canvas.width = 1920;
         canvas.height = 1080;
-        canvas.crossOrigin = 'anonymous'
 
         var ctx = canvas.getContext('2d');
 
@@ -60,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        var dataURI = canvas.toDataURL('image/jpeg', 1); // can also use 'image/png'
+        var dataURI = canvas.toDataURL('image/jpeg'); // can also use 'image/png'
 
         const myImage = groups[num - 1].querySelector('.my-img');
         const download = groups[num - 1].querySelector('.download');
