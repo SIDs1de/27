@@ -68,10 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        var dataURI = canvas.toDataURL('image/jpeg'); // can also use 'image/png'
+        canvas.toBlob(function (blob) {
+          saveAs(blob, "pretty image.png");
+        });
 
-        const myImage = groups[num - 1].querySelector('.my-img');
-        const download = groups[num - 1].querySelector('.download');
+        // var dataURI = canvas.toDataURL('image/jpeg'); // can also use 'image/png'
+
+        // const myImage = groups[num - 1].querySelector('.my-img');
+        // const download = groups[num - 1].querySelector('.download');
 
         myImage.src = dataURI;
         download.href = dataURI;
