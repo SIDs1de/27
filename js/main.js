@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnDraws.forEach(btnDraw => {
       btnDraw.addEventListener('click', (e) => {
         const num = btnDraw.dataset.draw
-        var canvas = document.querySelector('#canvas')
+        var canvas = groups[num - 1].querySelector('.canvas')
         canvas.width = 1920;
         canvas.height = 1080;
 
@@ -71,14 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.toBlob(function (blob) {
           saveAs(blob, "pretty image.png");
         });
-
-        // var dataURI = canvas.toDataURL('image/jpeg'); // can also use 'image/png'
-
-        // const myImage = groups[num - 1].querySelector('.my-img');
-        // const download = groups[num - 1].querySelector('.download');
-
-        myImage.src = dataURI;
-        download.href = dataURI;
       })
     })
   }, 100)
