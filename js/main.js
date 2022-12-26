@@ -52,13 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         var canvas = document.createElement('canvas')
         canvas.width = 1920;
         canvas.height = 1080;
+        canvas.crossOrigin = 'anonymous'
+
         var ctx = canvas.getContext('2d');
 
         const video = groups[num - 1].querySelector('video');
 
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        var dataURI = canvas.toDataURL('image/jpeg'); // can also use 'image/png'
+        var dataURI = canvas.toDataURL('image/jpeg', 1); // can also use 'image/png'
 
         const myImage = groups[num - 1].querySelector('.my-img');
         const download = groups[num - 1].querySelector('.download');
